@@ -1,0 +1,441 @@
+/* Imports -----------------------------------------------------------------*/
+
+@import "compass/reset";
+@import "compass/css3";
+
+/* Variables -------------------------------------------------------------- */
+
+$nav_height:70px;
+$side_padding:13%;
+$colour1:#65647D;
+$colour2:#558EB8;
+$colour3:#29B39C;
+$colour4:#6CD9A9;
+//$colour5:#E3EBE8;
+$colour5:#ebebeb;
+$colour6:#97c0e5;
+
+/* Global ----------------------------------------------------------------- */
+
+a {
+    text-decoration:none;
+    color:$colour2;
+    @include single-transition(color, 0.5s);
+}
+            
+a:hover {
+    color:$colour3;
+    @include single-transition(color, 0.5s);
+}
+
+.inactive {
+    pointer-events:none;
+    @include opacity(0.25);
+}
+
+/* Grid ------------------------------------------------------------------ */
+
+.table {
+    display:table;
+    table-layout:fixed;
+    width:100%;
+}
+
+.row {
+    display:table-row;
+}
+
+.cell {
+    display:table-cell;
+    @include box-sizing(border-box);
+    vertical-align:top;
+}
+
+/* Typography ------------------------------------------------------------ */
+
+body {
+    font-family:lato;
+    font-weight:400;
+    background-color:$colour5;
+}
+
+h1 {
+    font-size:3em;
+    font-weight:800;
+    margin-bottom:30px;
+}
+
+h2 {
+    font-size:1.5em;
+    font-weight:300;
+    margin-bottom:10px;
+}
+
+h3 {
+    font-weight:800;
+    font-size:1.1em;
+}
+
+p {
+    line-height:1.4em;
+}
+
+/* Nav ------------------------------------------------------------------- */
+
+nav {
+    display:block;
+    width:100%;
+    height:$nav_height;
+    position:fixed;
+    top:0px;
+    text-align:center;
+    background-color:$colour5;
+    border-bottom: 1px solid #ddd;
+    @include box-shadow(#777 0px 1px 0px);
+    z-index:1;
+    
+    ul {
+        vertical-align:top;
+        
+        li {
+            display:inline-block;
+            padding:27px 10px 27px 10px;
+            font-size:1em;
+            font-weight:400;
+
+            a {
+                @include single-transition(color, 0.5s);
+                color:$colour2;
+            }
+            
+            a:hover {
+                @include single-transition(color, 0.2s);
+                color:$colour4;
+            }
+            
+            a.current {
+                @include single-transition(color, 0.5s);
+                color:$colour4;
+            }
+        }
+        
+    }
+}
+
+/* Header ---------------------------------------------------------------- */
+
+#header {
+    height:900px;
+    background-image:url('../img/sfu_bg.jpg');
+    background-position:center;
+    @include background-size(cover);
+    color:$colour5;
+    text-align:center;
+    position:relative;
+    
+    #title {
+        position:absolute;
+        width:100%;
+        
+        #logo {
+            display:block;
+            margin:auto;
+        }
+
+        h2 {
+            margin:25px 0 30px;
+            font-size:3.5em;
+            font-weight:800;
+        }
+
+        a {
+            display:inline-block;
+            padding:25px;
+            font-size:2em;
+            font-weight:800;
+            @include border-radius(25px);
+            color:$colour5;
+            cursor:pointer;
+            cursor:hand;
+            @include single-transition(all, 0.5s);
+            background-color:$colour2;
+            @include box-shadow($colour1 2px 5px 0px);
+            @include transform(translateX(-2px) translateY(-5px));
+        }
+        
+        a:hover {
+            @include single-transition(all, 0.3s);
+            background-color:$colour3;
+            @include box-shadow($colour1 0px 0px 0px);
+            @include transform(translateX(0px) translateY(0px));
+        }
+    }
+    
+    .edge {
+        width:100%;
+        height:25px;
+        position:absolute;
+        bottom:0px;
+        background-image:url('../img/tri.png');
+    }
+}
+
+/* Content --------------------------------------------------------------- */
+
+.content {
+    padding:150px $side_padding 0;
+    
+    p {
+        margin-bottom:10px;
+    }
+}
+
+/* About ----------------------------------------------------------------- */
+
+#about {
+    #schedule {
+        margin-top:50px;
+        font-size:1.1em;
+        
+        .row {
+            
+            .cell {
+                background-color:$colour6;
+                padding:10px;
+                border:1px solid $colour5;
+                border-top:none;
+                border-right:none;
+            }
+
+            .schedule_column:last-child, .schedule_column:first-child {
+                border-left:none;
+                border-right:none;
+            }
+
+            #time_column {
+                width:125px;
+            }
+
+            #spkr_column {
+                width:132px;
+            }
+        }
+        
+        .row.break .cell {
+            background-color:$colour2;
+            color:$colour5;
+        }
+        
+        .row.break .cell:last-child {
+            border-left:none;
+        }
+    }
+}
+
+/* Categories ------------------------------------------------------------ */
+
+#categories {
+    #category_info {
+        margin-top:30px;
+    }
+    
+    .category {
+        text-align:center;
+    }
+    
+    .category_border {
+        padding:20px;
+        //border:1px solid $colour2;
+    }
+    
+    .spacer {
+        width:10px;
+    }
+    
+    h3 {
+        background-color:$colour2;
+        color:$colour5;
+        padding:10px;
+        margin-bottom:15px;
+    }
+    
+    .category_desc {
+        overflow:hidden;
+        position:relative;
+        
+        .fade {
+            position:absolute;
+            background-image:url('../img/fade.png');
+            bottom:0px;
+            height:50px;
+            width:100%;
+        }
+    }
+    
+    .more_button {
+        display:inline-block;
+        padding:10px;
+        width:50px;
+        margin-top:10px;
+        background-color:$colour2;
+        color:$colour5;
+        @include border-radius(10px);
+        @include single-transition(background-color, 0.5s);
+    }
+    
+    .more_button:hover {
+        background-color:$colour3;
+        @include single-transition(background-color, 0.5s);
+    }
+}
+
+/* Panelists/Speakers ---------------------------------------------------- */
+
+#panelists, #speakers {
+    .profile {
+        //border:1px solid $colour2;
+        
+        .row {
+        }
+        
+        img {
+            border:3px solid $colour2;
+            @include border-radius(50%);
+            height:140px;
+        }
+        
+        .table {
+            width:inherit;
+        }
+        
+        .cell {
+            vertical-align:middle;
+        }
+    }
+    
+    .spacer {
+        width:30px;
+        height:30px;
+    }
+}
+
+/* Games ----------------------------------------------------------------- */
+
+#games {
+    padding-bottom:150px;
+    
+    .cell {
+        
+        .table {
+            margin-bottom:15px;
+        }
+        
+        img {
+            width:100%;
+            @include border-radius(30px);
+            border:3px solid $colour2;
+        }
+    }
+    
+    .game_info {
+        width:90px;
+        
+        line-height:1.5em;
+    }
+    
+    .spacer {
+        background-color:transparent;
+        width:30px;
+        height:30px;
+    }
+}
+
+/* Submissions ----------------------------------------------------------- */
+
+#submissions {
+    margin-top:$nav-height;
+    padding:100px $side-padding;
+    
+    input {
+        display:block;
+        width:40%;
+        padding:10px;
+        @include box-sizing(border-box);
+        margin-bottom:10px;
+        margin-top:0px;
+    }
+    
+    .description {
+        font-family:lato;
+        padding:10px;
+        width:100%;
+        height:500px;
+        vertical-align:top;
+        @include box-sizing(border-box);
+        margin-bottom:10px;
+    }
+    
+    .button {
+        width:200px;
+    }
+}
+
+/* Footer ---------------------------------------------------------------- */
+
+footer {
+    background-image:url('../img/triangular.png');
+    position:relative;
+    text-align:center;
+    color:$colour1;
+    padding:65px $side_padding 40px;
+    
+    .edge {
+        width:100%;
+        height:25px;
+        position:absolute;
+        top:0;
+        left:0;
+        background-image:url('../img/tri.png');
+        @include transform(scaley(-1));
+    }
+    
+    .table {
+        margin-bottom:40px;
+        text-align:left;
+        
+        .map {
+        }
+        
+        .spacer {
+            width:20px;
+        }
+        
+        .contact {
+            line-height: 1.5em;
+            width:200px;
+            
+            h2 {
+                font-weight:800;
+            }
+            
+            h3 {
+                margin-top:10px;
+            }
+            
+            i {
+                margin-right:5px;
+                margin-top:5px;
+            }
+            
+        }
+    }
+    
+    iframe {
+        width:100%;
+        height:400px;
+    }
+    
+    .copy {
+        font-weight:800;
+    }
+}
