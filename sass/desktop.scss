@@ -278,68 +278,12 @@ nav {
     }
 }
 
-/*
-#categories {
-    #category_info {
-        margin-top:30px;
-    }
-    
-    .category {
-        text-align:center;
-    }
-    
-    .category_border {
-        padding:20px;
-        //border:1px solid $colour2;
-    }
-    
-    .spacer {
-        width:10px;
-    }
-    
-    h3 {
-        background-color:$colour2;
-        color:$colour5;
-        padding:10px;
-        margin-bottom:15px;
-    }
-    
-    .category_desc {
-        overflow:hidden;
-        position:relative;
-        
-        .fade {
-            position:absolute;
-            background-image:url('../img/fade.png');
-            bottom:0px;
-            height:50px;
-            width:100%;
-        }
-    }
-    
-    .more_button {
-        display:inline-block;
-        padding:10px;
-        width:50px;
-        margin-top:10px;
-        background-color:$colour2;
-        color:$colour5;
-        @include border-radius(10px);
-        @include single-transition(background-color, 0.5s);
-    }
-    
-    .more_button:hover {
-        background-color:$colour3;
-        @include single-transition(background-color, 0.5s);
-    }
-}
-*/
-
 /* Panelists/Speakers ---------------------------------------------------- */
 
 #panelists, #speakers {
     .profile {
         //border:1px solid $colour2;
+        vertical-align:middle;
         
         .row {
         }

@@ -385,64 +385,12 @@ nav ul li a.current {
   display: block;
 }
 
-/*
-#categories {
-    #category_info {
-        margin-top:30px;
-    }
-    
-    .category {
-        text-align:center;
-    }
-    
-    .category_border {
-        padding:20px;
-        //border:1px solid $colour2;
-    }
-    
-    .spacer {
-        width:10px;
-    }
-    
-    h3 {
-        background-color:$colour2;
-        color:$colour5;
-        padding:10px;
-        margin-bottom:15px;
-    }
-    
-    .category_desc {
-        overflow:hidden;
-        position:relative;
-        
-        .fade {
-            position:absolute;
-            background-image:url('../img/fade.png');
-            bottom:0px;
-            height:50px;
-            width:100%;
-        }
-    }
-    
-    .more_button {
-        display:inline-block;
-        padding:10px;
-        width:50px;
-        margin-top:10px;
-        background-color:$colour2;
-        color:$colour5;
-        @include border-radius(10px);
-        @include single-transition(background-color, 0.5s);
-    }
-    
-    .more_button:hover {
-        background-color:$colour3;
-        @include single-transition(background-color, 0.5s);
-    }
-}
-*/
 /* Panelists/Speakers ---------------------------------------------------- */
-/* line 347, ../sass/desktop.scss */
+/* line 284, ../sass/desktop.scss */
+#panelists .profile, #speakers .profile {
+  vertical-align: middle;
+}
+/* line 291, ../sass/desktop.scss */
 #panelists .profile img, #speakers .profile img {
   border: 3px solid #558eb8;
   -webkit-border-radius: 50%;
@@ -452,30 +400,30 @@ nav ul li a.current {
   border-radius: 50%;
   height: 140px;
 }
-/* line 353, ../sass/desktop.scss */
+/* line 297, ../sass/desktop.scss */
 #panelists .profile .table, #speakers .profile .table {
   width: inherit;
 }
-/* line 357, ../sass/desktop.scss */
+/* line 301, ../sass/desktop.scss */
 #panelists .profile .cell, #speakers .profile .cell {
   vertical-align: middle;
 }
-/* line 362, ../sass/desktop.scss */
+/* line 306, ../sass/desktop.scss */
 #panelists .spacer, #speakers .spacer {
   width: 30px;
   height: 30px;
 }
 
 /* Games ----------------------------------------------------------------- */
-/* line 370, ../sass/desktop.scss */
+/* line 314, ../sass/desktop.scss */
 #games {
   padding-bottom: 150px;
 }
-/* line 375, ../sass/desktop.scss */
+/* line 319, ../sass/desktop.scss */
 #games .cell .table {
   margin-bottom: 15px;
 }
-/* line 379, ../sass/desktop.scss */
+/* line 323, ../sass/desktop.scss */
 #games .cell img {
   width: 100%;
   -webkit-border-radius: 30px;
@@ -485,12 +433,12 @@ nav ul li a.current {
   border-radius: 30px;
   border: 3px solid #558eb8;
 }
-/* line 386, ../sass/desktop.scss */
+/* line 330, ../sass/desktop.scss */
 #games .game_info {
   width: 90px;
   line-height: 1.5em;
 }
-/* line 392, ../sass/desktop.scss */
+/* line 336, ../sass/desktop.scss */
 #games .spacer {
   background-color: transparent;
   width: 30px;
@@ -498,12 +446,12 @@ nav ul li a.current {
 }
 
 /* Submissions ----------------------------------------------------------- */
-/* line 401, ../sass/desktop.scss */
+/* line 345, ../sass/desktop.scss */
 #submissions {
   margin-top: 70px;
   padding: 100px 13%;
 }
-/* line 405, ../sass/desktop.scss */
+/* line 349, ../sass/desktop.scss */
 #submissions input {
   display: block;
   width: 40%;
@@ -514,7 +462,7 @@ nav ul li a.current {
   margin-bottom: 10px;
   margin-top: 0px;
 }
-/* line 414, ../sass/desktop.scss */
+/* line 358, ../sass/desktop.scss */
 #submissions .description {
   font-family: lato;
   padding: 10px;
@@ -526,18 +474,18 @@ nav ul li a.current {
   box-sizing: border-box;
   margin-bottom: 10px;
 }
-/* line 424, ../sass/desktop.scss */
+/* line 368, ../sass/desktop.scss */
 #submissions .button {
   width: 200px;
 }
-/* line 428, ../sass/desktop.scss */
+/* line 372, ../sass/desktop.scss */
 #submissions h2 {
   margin-bottom: 30px;
   font-weight: 800;
 }
 
 /* Footer ---------------------------------------------------------------- */
-/* line 436, ../sass/desktop.scss */
+/* line 380, ../sass/desktop.scss */
 footer {
   background-image: url("../img/triangular.png");
   position: relative;
@@ -545,7 +493,7 @@ footer {
   color: #65647d;
   padding: 65px 13% 40px;
 }
-/* line 443, ../sass/desktop.scss */
+/* line 387, ../sass/desktop.scss */
 footer .edge {
   width: 100%;
   height: 25px;
@@ -559,39 +507,39 @@ footer .edge {
   -o-transform: scaley(-1);
   transform: scaley(-1);
 }
-/* line 453, ../sass/desktop.scss */
+/* line 397, ../sass/desktop.scss */
 footer .table {
   margin-bottom: 40px;
   text-align: left;
 }
-/* line 460, ../sass/desktop.scss */
+/* line 404, ../sass/desktop.scss */
 footer .table .spacer {
   width: 20px;
 }
-/* line 464, ../sass/desktop.scss */
+/* line 408, ../sass/desktop.scss */
 footer .table .contact {
   line-height: 1.5em;
   width: 200px;
 }
-/* line 468, ../sass/desktop.scss */
+/* line 412, ../sass/desktop.scss */
 footer .table .contact h2 {
   font-weight: 800;
 }
-/* line 472, ../sass/desktop.scss */
+/* line 416, ../sass/desktop.scss */
 footer .table .contact h3 {
   margin-top: 10px;
 }
-/* line 476, ../sass/desktop.scss */
+/* line 420, ../sass/desktop.scss */
 footer .table .contact i {
   margin-right: 5px;
   margin-top: 5px;
 }
-/* line 484, ../sass/desktop.scss */
+/* line 428, ../sass/desktop.scss */
 footer iframe {
   width: 100%;
   height: 400px;
 }
-/* line 489, ../sass/desktop.scss */
+/* line 433, ../sass/desktop.scss */
 footer .copy {
   font-weight: 800;
 }
