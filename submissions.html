@@ -17,17 +17,21 @@
             <li><a href='index.html#panelists'>Panelists</a></li>
             <li><a href='index.html#speakers'>Speakers</a></li>
             <li><a href='index.html#games'>Games</a></li>
-            <li><a href='#' target='_blank'>Submissions</a></li>
+            <li><a href='#' target='_blank'>Submit</a></li>
             <li><a href='http://www.eventbrite.com/' target='_blank'>RSVP</a></li>
         </ul>
     </nav>
     
     <section id='submissions' class='content'>
-        <h1>Submission</h1>
+        <h1>Submit</h1>
+        <h2>Deadline: March 13th</h2>
+        <p>To submit your project for consideration simply fill out the form below. In the description area be sure to restate the category you are submitting to and justify why your project applies to that category. Be sure to also include a download link to a playable version of your game. Accepted submission formats are: play-in-browser (ex: Unity Web Player) or downloadable to Windows or Mac (ex: Dropbox, Google Drive, etc).</p>
         <form  method="POST" name="contactform" action="contact.php">
-            <input type='text' placeholder='Team Names' name='members'>
-            <input type='email' placeholder='Email' name='email'>
-            <textarea class='description' placeholder='Description and Link' name='description'></textarea>
+            <input type='text' placeholder='Project Name' name='pname'>
+            <input type='text' placeholder='Category' name='category'>
+            <input type='text' placeholder='Team Member Names' name='members'>
+            <input type='email' placeholder='Contact Email' name='email'>
+            <textarea class='description' placeholder='Project Description and Link' name='description'></textarea>
             <input type='submit' class='button' value='Submit'>
         </form>
     </section>

@@ -225,7 +225,7 @@ nav ul li a.current {
 }
 /* line 145, ../sass/desktop.scss */
 #header #title h2 {
-  margin: 25px 0 30px;
+  margin: 45px 0 50px;
   font-size: 3.5em;
   font-weight: 800;
 }
@@ -241,12 +241,14 @@ nav ul li a.current {
   -o-border-radius: 25px;
   border-radius: 25px;
   color: #ebebeb;
-  cursor: pointer;
-  cursor: hand;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition-property: background-color, -webkit-transform, box-shadow;
+  -moz-transition-property: background-color, -moz-transform, box-shadow;
+  -o-transition-property: background-color, -o-transform, box-shadow;
+  transition-property: background-color, transform, box-shadow;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
   background-color: #558eb8;
   -webkit-box-shadow: #65647d 2px 5px 0px;
   -moz-box-shadow: #65647d 2px 5px 0px;
@@ -257,12 +259,16 @@ nav ul li a.current {
   -o-transform: translateX(-2px) translateY(-5px);
   transform: translateX(-2px) translateY(-5px);
 }
-/* line 166, ../sass/desktop.scss */
+/* line 165, ../sass/desktop.scss */
 #header #title a:hover {
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition-property: background-color, -webkit-transform, box-shadow;
+  -moz-transition-property: background-color, -moz-transform, box-shadow;
+  -o-transition-property: background-color, -o-transform, box-shadow;
+  transition-property: background-color, transform, box-shadow;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
   background-color: #29b39c;
   -webkit-box-shadow: #65647d 0px 0px 0px;
   -moz-box-shadow: #65647d 0px 0px 0px;
@@ -328,73 +334,115 @@ nav ul li a.current {
 #about #schedule .row.break .cell:last-child {
   border-left: none;
 }
+/* line 234, ../sass/desktop.scss */
+#about h2 {
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+/* line 239, ../sass/desktop.scss */
+#about .highlight {
+  color: #558eb8;
+}
 
 /* Categories ------------------------------------------------------------ */
-/* line 238, ../sass/desktop.scss */
-#categories #category_info {
-  margin-top: 30px;
-}
-/* line 242, ../sass/desktop.scss */
-#categories .category {
+/* line 247, ../sass/desktop.scss */
+#categories .tab {
   text-align: center;
-}
-/* line 246, ../sass/desktop.scss */
-#categories .category_border {
-  padding: 20px;
-}
-/* line 251, ../sass/desktop.scss */
-#categories .spacer {
-  width: 10px;
+  border: 1px solid #558eb8;
+  border-right: none;
+  padding: 10px;
+  font-weight: 800;
 }
 /* line 255, ../sass/desktop.scss */
-#categories h3 {
+#categories .tab:last-child {
+  border-right: 1px solid #558eb8;
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+/* line 260, ../sass/desktop.scss */
+#categories .tab.selected {
   background-color: #558eb8;
   color: #ebebeb;
-  padding: 10px;
-  margin-bottom: 15px;
-}
-/* line 262, ../sass/desktop.scss */
-#categories .category_desc {
-  overflow: hidden;
-  position: relative;
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
 }
 /* line 266, ../sass/desktop.scss */
-#categories .category_desc .fade {
-  position: absolute;
-  background-image: url("../img/fade.png");
-  bottom: 0px;
-  height: 50px;
-  width: 100%;
+#categories .category_info {
+  padding: 20px 40px;
+  border: 1px solid #558eb8;
+  border-top: none;
 }
-/* line 275, ../sass/desktop.scss */
-#categories .more_button {
-  display: inline-block;
-  padding: 10px;
-  width: 50px;
-  margin-top: 10px;
-  background-color: #558eb8;
-  color: #ebebeb;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px;
-  -webkit-transition: background-color 0.5s;
-  -moz-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  transition: background-color 0.5s;
+/* line 272, ../sass/desktop.scss */
+#categories .text {
+  display: none;
 }
-/* line 286, ../sass/desktop.scss */
-#categories .more_button:hover {
-  background-color: #29b39c;
-  -webkit-transition: background-color 0.5s;
-  -moz-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  transition: background-color 0.5s;
+/* line 276, ../sass/desktop.scss */
+#categories .text.selected {
+  display: block;
 }
 
+/*
+#categories {
+    #category_info {
+        margin-top:30px;
+    }
+    
+    .category {
+        text-align:center;
+    }
+    
+    .category_border {
+        padding:20px;
+        //border:1px solid $colour2;
+    }
+    
+    .spacer {
+        width:10px;
+    }
+    
+    h3 {
+        background-color:$colour2;
+        color:$colour5;
+        padding:10px;
+        margin-bottom:15px;
+    }
+    
+    .category_desc {
+        overflow:hidden;
+        position:relative;
+        
+        .fade {
+            position:absolute;
+            background-image:url('../img/fade.png');
+            bottom:0px;
+            height:50px;
+            width:100%;
+        }
+    }
+    
+    .more_button {
+        display:inline-block;
+        padding:10px;
+        width:50px;
+        margin-top:10px;
+        background-color:$colour2;
+        color:$colour5;
+        @include border-radius(10px);
+        @include single-transition(background-color, 0.5s);
+    }
+    
+    .more_button:hover {
+        background-color:$colour3;
+        @include single-transition(background-color, 0.5s);
+    }
+}
+*/
 /* Panelists/Speakers ---------------------------------------------------- */
-/* line 301, ../sass/desktop.scss */
+/* line 347, ../sass/desktop.scss */
 #panelists .profile img, #speakers .profile img {
   border: 3px solid #558eb8;
   -webkit-border-radius: 50%;
@@ -404,30 +452,30 @@ nav ul li a.current {
   border-radius: 50%;
   height: 140px;
 }
-/* line 307, ../sass/desktop.scss */
+/* line 353, ../sass/desktop.scss */
 #panelists .profile .table, #speakers .profile .table {
   width: inherit;
 }
-/* line 311, ../sass/desktop.scss */
+/* line 357, ../sass/desktop.scss */
 #panelists .profile .cell, #speakers .profile .cell {
   vertical-align: middle;
 }
-/* line 316, ../sass/desktop.scss */
+/* line 362, ../sass/desktop.scss */
 #panelists .spacer, #speakers .spacer {
   width: 30px;
   height: 30px;
 }
 
 /* Games ----------------------------------------------------------------- */
-/* line 324, ../sass/desktop.scss */
+/* line 370, ../sass/desktop.scss */
 #games {
   padding-bottom: 150px;
 }
-/* line 329, ../sass/desktop.scss */
+/* line 375, ../sass/desktop.scss */
 #games .cell .table {
   margin-bottom: 15px;
 }
-/* line 333, ../sass/desktop.scss */
+/* line 379, ../sass/desktop.scss */
 #games .cell img {
   width: 100%;
   -webkit-border-radius: 30px;
@@ -437,12 +485,12 @@ nav ul li a.current {
   border-radius: 30px;
   border: 3px solid #558eb8;
 }
-/* line 340, ../sass/desktop.scss */
+/* line 386, ../sass/desktop.scss */
 #games .game_info {
   width: 90px;
   line-height: 1.5em;
 }
-/* line 346, ../sass/desktop.scss */
+/* line 392, ../sass/desktop.scss */
 #games .spacer {
   background-color: transparent;
   width: 30px;
@@ -450,12 +498,12 @@ nav ul li a.current {
 }
 
 /* Submissions ----------------------------------------------------------- */
-/* line 355, ../sass/desktop.scss */
+/* line 401, ../sass/desktop.scss */
 #submissions {
   margin-top: 70px;
   padding: 100px 13%;
 }
-/* line 359, ../sass/desktop.scss */
+/* line 405, ../sass/desktop.scss */
 #submissions input {
   display: block;
   width: 40%;
@@ -466,7 +514,7 @@ nav ul li a.current {
   margin-bottom: 10px;
   margin-top: 0px;
 }
-/* line 368, ../sass/desktop.scss */
+/* line 414, ../sass/desktop.scss */
 #submissions .description {
   font-family: lato;
   padding: 10px;
@@ -478,13 +526,18 @@ nav ul li a.current {
   box-sizing: border-box;
   margin-bottom: 10px;
 }
-/* line 378, ../sass/desktop.scss */
+/* line 424, ../sass/desktop.scss */
 #submissions .button {
   width: 200px;
 }
+/* line 428, ../sass/desktop.scss */
+#submissions h2 {
+  margin-bottom: 30px;
+  font-weight: 800;
+}
 
 /* Footer ---------------------------------------------------------------- */
-/* line 385, ../sass/desktop.scss */
+/* line 436, ../sass/desktop.scss */
 footer {
   background-image: url("../img/triangular.png");
   position: relative;
@@ -492,7 +545,7 @@ footer {
   color: #65647d;
   padding: 65px 13% 40px;
 }
-/* line 392, ../sass/desktop.scss */
+/* line 443, ../sass/desktop.scss */
 footer .edge {
   width: 100%;
   height: 25px;
@@ -506,39 +559,39 @@ footer .edge {
   -o-transform: scaley(-1);
   transform: scaley(-1);
 }
-/* line 402, ../sass/desktop.scss */
+/* line 453, ../sass/desktop.scss */
 footer .table {
   margin-bottom: 40px;
   text-align: left;
 }
-/* line 409, ../sass/desktop.scss */
+/* line 460, ../sass/desktop.scss */
 footer .table .spacer {
   width: 20px;
 }
-/* line 413, ../sass/desktop.scss */
+/* line 464, ../sass/desktop.scss */
 footer .table .contact {
   line-height: 1.5em;
   width: 200px;
 }
-/* line 417, ../sass/desktop.scss */
+/* line 468, ../sass/desktop.scss */
 footer .table .contact h2 {
   font-weight: 800;
 }
-/* line 421, ../sass/desktop.scss */
+/* line 472, ../sass/desktop.scss */
 footer .table .contact h3 {
   margin-top: 10px;
 }
-/* line 425, ../sass/desktop.scss */
+/* line 476, ../sass/desktop.scss */
 footer .table .contact i {
   margin-right: 5px;
   margin-top: 5px;
 }
-/* line 433, ../sass/desktop.scss */
+/* line 484, ../sass/desktop.scss */
 footer iframe {
   width: 100%;
   height: 400px;
 }
-/* line 438, ../sass/desktop.scss */
+/* line 489, ../sass/desktop.scss */
 footer .copy {
   font-weight: 800;
 }

@@ -1,12 +1,17 @@
 <?php
+$field_pname = $_POST['pname'];
+$field_category = $_POST['category'];
 $field_members = $_POST['members'];
 $field_email = $_POST['email'];
 $field_description = $_POST['description'];
+$field_
 
 $mail_to = 'swarwick@sfu.ca';
 $subject = 'AFK Submission Form ';
 
-$body_message = 'Members: '.$field_members."\n";
+$body_message = 'Project Name: '.$field_pname."\n";
+$body_message .= 'Category: '.$field_category."\n";
+$body_message .= 'Members: '.$field_members."\n";
 $body_message .= 'E-mail: '.$field_email."\n";
 $body_message .= 'Description: '.$field_description;
 
@@ -24,7 +29,7 @@ if ($mail_status) { ?>
 }
 else { ?>
 	<script language="javascript" type="text/javascript">
-		alert('Message failed. Please, send an email to sdcinglis@gmail.com directly.');
+		alert('Message failed. Please, send an email to swarwick@sfu.ca directly.');
 		window.location = 'index.html';
 	</script>
 <?php
