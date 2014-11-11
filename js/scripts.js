@@ -12,6 +12,13 @@ function updateHeader() {
     $('#title').css('top', wHeight / 2 - tHeight / 2);
     
     
+    var pTop = $('#panelists').offset().top,
+        pHeight = $('#panelists').height(),
+        gTop = $('#games').offset().top,
+        gHeight = $('#games').height();
+    
+    $('.coming_soon.panelists').css('top', pTop + pHeight / 2);
+    $('.coming_soon.games').css('top', gTop + gHeight / 2);
 }
 
 $(window).resize(updateHeader);
@@ -48,29 +55,6 @@ $(document).ready(function () {
         $(this).addClass('selected');
         $(this.hash).addClass('selected');
     });
-    
-    /*$('.category_desc').css('height', '100px');
-    
-    $('.more_button').click(function (event) {
-        event.preventDefault();
-        
-        var cat = $(this).parent(),
-            p = cat.find('p'),
-            cont = cat.find('.category_desc'),
-            fade = cont.find('.fade');
-        
-        if ($(this).html() === 'More') {
-            cont.animate({height: p.height() + 10}, 1000, function () {
-                cont.css('height', 'inherit');
-            });
-            fade.delay(1000).fadeOut(500);
-            $(this).html('Less');
-        } else {
-            fade.fadeIn(250);
-            cont.delay(250).animate({height: 100}, 1000);
-            $(this).html('More');
-        }
-    });*/
 });
 
 $(document).scroll(function () {

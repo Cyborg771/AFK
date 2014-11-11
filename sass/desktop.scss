@@ -30,7 +30,20 @@ a:hover {
 
 .inactive {
     pointer-events:none;
-    @include opacity(0.25);
+    @include opacity(0.1);
+}
+
+.coming_soon {
+    color:$colour1;
+    font-size:6em;
+    margin:0;
+    padding:0;
+    display:block;
+    position:absolute;
+    width:100%;
+    text-align:center;
+    top:0px;
+    left:0px;
 }
 
 /* Grid ------------------------------------------------------------------ */
@@ -217,7 +230,7 @@ nav {
             }
 
             #spkr_column {
-                width:132px;
+                width:137px;
             }
         }
         
